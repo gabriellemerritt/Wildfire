@@ -12,6 +12,7 @@ if __name__ == "__main__":
     with open(file_county_files ,'rU') as k: 
         reader = csv.reader(k, quotechar='"', delimiter=',')
         county_files = list(reader)
+        
     with open (file_dates_files, 'rU') as m: 
         reader = csv.reader(m, quotechar='"', delimiter=',')
         date_files = list(reader)
