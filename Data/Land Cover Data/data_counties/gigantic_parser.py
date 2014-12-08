@@ -42,6 +42,6 @@ if __name__ == "__main__":
             weather_data = list(reader)
 
         for i in xrange(len(dates_all)):
-            wrt.writerow([c_data[i], weather_data[i], holidays[i]])
+            wrt.writerow([c_data[i], weather_data[i], holidays[i]],fire_data[i])
 
     outfile.close()
