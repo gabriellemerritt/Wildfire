@@ -11,7 +11,7 @@ vals = np.random.random_integers(0,3,58)
 rdiff = 255/4
 
 
-base = Image.open("county_cut__58.png")
+base = Image.open("county_cut__59.png")
 base.load()
 rb,gb,bb,ab = np.array(base).T
 
@@ -22,7 +22,7 @@ if(rv==0):
     gb[:,:]=255
     bb[:,:]=255
 if(rv!=0):
-    rb[:,:]=rdiff*rv
+    rb[:,:]=0
     gb[:,:]=0
     bb[:,:]=0
 im_paste = Image.fromarray(np.dstack([item.T for item in (rb,gb,bb,ab)]))
@@ -30,7 +30,7 @@ im_paste = Image.fromarray(np.dstack([item.T for item in (rb,gb,bb,ab)]))
 base = Image.fromarray(np.dstack([item.T for item in (rb,gb,bb,ab)]))
 fil_end = ".png"
 
-for i in range (1,58):
+for i in range (1,59):
     if (i<10):
         fil_start = "county_cut__0";
     if (i>=10):
